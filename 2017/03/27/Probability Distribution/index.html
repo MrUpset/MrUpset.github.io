@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://mrupset.github.io/2017/03/27/Probability Distribution/index.html">
 <meta property="og:site_name" content="Mr.Upset">
 <meta property="og:description" content="整理了一些常见的概率分布">
-<meta property="og:updated_time" content="2017-03-29T04:11:15.539Z">
+<meta property="og:updated_time" content="2017-03-29T06:29:44.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="几种常见的概率分布">
 <meta name="twitter:description" content="整理了一些常见的概率分布">
@@ -197,16 +197,6 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
           </a>
         </li>
       
@@ -325,11 +315,6 @@
           
 
           
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-            </span>
-          
 
           
 
@@ -350,76 +335,96 @@
       
 
       
-        <table>
+        <style>
+table th {
+    font-weight: bold; /*加粗*/
+    text-align: center !important; /*内容居中，加上 !important 避免被 Markdown 样式覆盖*/
+    background: rgba(158,188,226,0.2); /*背景色*/
+}
+table th:first-of-type {
+    width: 80px;
+}
+table th:nth-of-type(3) {
+    width: 120px;
+}
+table th:nth-of-type(4) {
+    width: 50px;
+}
+table th:nth-of-type(5) {
+    width: 100px;
+}
+</style>
+
+<table>
 <thead>
 <tr>
-<th style="text-align:left">分布名称</th>
-<th style="text-align:left">概率函数</th>
-<th style="text-align:left">分布</th>
+<th style="text-align:center">分布名称</th>
+<th style="text-align:center">概率函数</th>
+<th style="text-align:center">分布</th>
 <th style="text-align:center">期望</th>
 <th style="text-align:center">方差</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">0-1分布</td>
-<td style="text-align:left">$P(x=k)=p^k(1-p)^k$</td>
-<td style="text-align:left">$X\sim B(1,p)$</td>
+<td style="text-align:center">0-1分布</td>
+<td style="text-align:center">$P(x=k)=p^k(1-p)^k$</td>
+<td style="text-align:center">$X\sim B(1,p)$</td>
 <td style="text-align:center">$p$</td>
 <td style="text-align:center">$p(1-p)$</td>
 </tr>
 <tr>
-<td style="text-align:left">伯努利分布</td>
-<td style="text-align:left">$P(x=k)=C_n^kp^k(1-p)^k$</td>
-<td style="text-align:left">$X\sim B(n,p)$</td>
+<td style="text-align:center">伯努利分布</td>
+<td style="text-align:center">$P(x=k)=C_n^kp^k(1-p)^k$</td>
+<td style="text-align:center">$X\sim B(n,p)$</td>
 <td style="text-align:center">$np$</td>
 <td style="text-align:center">$np(1-p)$</td>
 </tr>
 <tr>
-<td style="text-align:left">Poisson分布</td>
-<td style="text-align:left">$P(x=k)=\frac{\lambda^k}{k!}e^{-\lambda}$</td>
-<td style="text-align:left">$X\sim P(\lambda)$</td>
+<td style="text-align:center">Poisson分布</td>
+<td style="text-align:center">$P(x=k)=\frac{\lambda^k}{k!}e^{-\lambda}$</td>
+<td style="text-align:center">$X\sim P(\lambda)$</td>
 <td style="text-align:center">$\lambda$</td>
 <td style="text-align:center">$\lambda$</td>
 </tr>
 <tr>
-<td style="text-align:left">均匀分布</td>
-<td style="text-align:left">$f(x)= \begin{cases} \frac{1}{b-a} &amp; {a\le x\le b} \\ 0 &amp; {otherwise} \end{cases}$</td>
-<td style="text-align:left">$X\sim U(a,b)$</td>
+<td style="text-align:center">均匀分布</td>
+<td style="text-align:center">$f(x)= \begin{cases} \frac{1}{b-a} &amp; {a\le x\le b} \\ 0 &amp; {otherwise} \end{cases}$</td>
+<td style="text-align:center">$X\sim U(a,b)$</td>
 <td style="text-align:center">$\frac{a+b}{2}$</td>
 <td style="text-align:center">$\frac{(b-a)^2}{12}$</td>
 </tr>
 <tr>
-<td style="text-align:left">正态分布</td>
-<td style="text-align:left">$f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$</td>
-<td style="text-align:left">$X\sim N(\mu,\sigma^2)$</td>
+<td style="text-align:center">正态分布</td>
+<td style="text-align:center">$f(x)=\frac{1}{\sqrt{2\pi\sigma}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$</td>
+<td style="text-align:center">$X\sim N(\mu,\sigma^2)$</td>
 <td style="text-align:center">$\mu$</td>
 <td style="text-align:center">$\sigma^2$</td>
 </tr>
 <tr>
-<td style="text-align:left">指数分布</td>
-<td style="text-align:left">$f(x)=\begin{cases}  \lambda e^{-\lambda x} &amp; {x&gt;0} \\ 0 &amp; {x\leq 0} \end{cases}$</td>
-<td style="text-align:left">$X\sim E(\lambda)$</td>
+<td style="text-align:center">指数分布</td>
+<td style="text-align:center">$f(x)=\begin{cases}  \lambda e^{-\lambda x} &amp; {x&gt;0} \\ 0 &amp; {x\leq 0} \end{cases}$</td>
+<td style="text-align:center">$X\sim E(\lambda)$</td>
 <td style="text-align:center">$\frac{1}{\lambda}$</td>
 <td style="text-align:center">$\frac{1}{\lambda^2}$</td>
 </tr>
 <tr>
-<td style="text-align:left">几何分布</td>
-<td style="text-align:left">$P(x=k)=(1-p)^{k-1}p$</td>
-<td style="text-align:left">$X\sim G(p)$</td>
+<td style="text-align:center">几何分布</td>
+<td style="text-align:center">$P(x=k)=(1-p)^{k-1}p$</td>
+<td style="text-align:center">$X\sim G(p)$</td>
 <td style="text-align:center">$\frac{1}{p}$</td>
 <td style="text-align:center">$\frac{1-p}{p^2}$</td>
 </tr>
 <tr>
-<td style="text-align:left">超几何分布</td>
-<td style="text-align:left">$P(x=k)= \frac{C^{n-k}_{N-M} \times C^k_M }{C^n_N}$</td>
-<td style="text-align:left">$X\sim H(n,M,N)$</td>
+<td style="text-align:center">超几何分布</td>
+<td style="text-align:center">$P(x=k)= \frac{C^{n-k}_{N-M} \times C^k_M }{C^n_N}$</td>
+<td style="text-align:center">$X\sim H(n,M,N)$</td>
 <td style="text-align:center">$\frac{nM}{N}$</td>
 <td style="text-align:center">$\frac{nM(N-M)(N-n)}{N^2(N-1)}$</td>
 </tr>
 </tbody>
 </table>
-<table><br>    <tr><br>        <th>设备</th><br>        <th>设备文件名</th><br>        <th>文件描述符</th><br>        <th>类型</th><br>    </tr><br>    <tr><br>        <th>键盘</th><br>        <th>$P(x=k)=p^k(1-p)^kP(x=k)=p^k(1-p)^k$</th><br>        <th>0</th><br>        <th>标准输入</th><br>    </tr><br>    <tr><br>        <th>显示器</th><br>        <th>/dev/stdout</th><br>        <th>1</th><br>        <th>标准输出</th><br>    </tr><br>    <tr><br>        <th>显示器</th><br>        <th>/dev/stderr</th><br>        <th>2</th><br>        <th>标准错误输出</th><br>    </tr><br></table>
+
       
     </div>
 
@@ -565,7 +570,7 @@
               <span class="links-of-author-item">
                 <a href="https://github.com/MrUpset" target="_blank" title="Github">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-github"></i>
                   
                   Github
                 </a>
@@ -574,18 +579,9 @@
               <span class="links-of-author-item">
                 <a href="http://www.zhihu.com/people/yqtan" target="_blank" title="知乎">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-info"></i>
                   
                   知乎
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="" target="_blank" title="weibo">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  weibo
                 </a>
               </span>
             
@@ -630,26 +626,6 @@
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
-
 
         
       </div>
@@ -727,24 +703,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
@@ -792,6 +751,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
 
   
 
