@@ -93,7 +93,7 @@
 <meta property="og:url" content="https://mrupset.github.io/2017/05/12/linear_algebra/index.html">
 <meta property="og:site_name" content="Mr.Upset">
 <meta property="og:description" content="整理了基本的线性代数定义及公式，以备查用">
-<meta property="og:updated_time" content="2017-05-12T03:54:04.351Z">
+<meta property="og:updated_time" content="2017-05-12T05:46:54.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性代数">
 <meta name="twitter:description" content="整理了基本的线性代数定义及公式，以备查用">
@@ -345,11 +345,11 @@
 <h2 id="1-2-行列式的性质"><a href="#1-2-行列式的性质" class="headerlink" title="1.2 行列式的性质"></a>1.2 行列式的性质</h2><ul>
 <li>$|A| = |A^T|$</li>
 <li>$|a_1, \cdots, a_{i-1}, 0, a_{i+1}, \cdots, a_n| = 0$</li>
-<li>$|a_1, \cdots, a_{i-1}, ka_i, a_{i+1}, \cdots, a_n| = k|a_1, a_2, \cdots, a_n|（倍乘性质）$</li>
-<li>$|a_1, \cdots, a_{i-1}, a_i+b_i, a_{i+1}, \cdots, a_n| = |a_1, \cdots, a_{i-1}, a_i, a_{i+1}, \cdots, a_n|+|a_1, \cdots, a_{i-1}, b_i, a_{i+1}, \cdots, a_n|（单列可拆性质）$</li>
-<li>$|a_1, \cdots, a_i, \cdots, a_j, \cdots, a_n| = -|a_1, \cdots, a_j, \cdots, a_i, \cdots, a_n|（互换性质）$</li>
+<li>$|a_1, \cdots, a_{i-1}, ka_i, a_{i+1}, \cdots, a_n| = k|a_1, a_2, \cdots, a_n|$（倍乘性质）</li>
+<li>$|a_1, \cdots, a_{i-1}, a_i+b_i, a_{i+1}, \cdots, a_n| = |a_1, \cdots, a_{i-1}, a_i, a_{i+1}, \cdots, a_n|+|a_1, \cdots, a_{i-1}, b_i, a_{i+1}, \cdots, a_n|$（单列可拆性质）</li>
+<li>$|a_1, \cdots, a_i, \cdots, a_j, \cdots, a_n| = -|a_1, \cdots, a_j, \cdots, a_i, \cdots, a_n|$（互换性质）</li>
 <li>$|a_1, \cdots, a_i, \cdots, ka_i, \cdots, a_n| = 0$</li>
-<li>$|a_1, \cdots, a_i, \cdots, a_j, \cdots, a_n| = |a_1, \cdots, a_i, \cdots, ka_i+a_j, \cdots, a_n|（倍加性质）$</li>
+<li>$|a_1, \cdots, a_i, \cdots, a_j, \cdots, a_n| = |a_1, \cdots, a_i, \cdots, ka_i+a_j, \cdots, a_n|$（倍加性质）</li>
 </ul>
 <h2 id="1-3-行列式展开定理"><a href="#1-3-行列式展开定理" class="headerlink" title="1.3 行列式展开定理"></a>1.3 行列式展开定理</h2><ul>
 <li>代数余子式$A_{ij} = (-1)^{i+j}M_{ij}$</li>
@@ -396,21 +396,21 @@
 <li>${\begin{bmatrix} A&amp;O \\ O&amp;B \end{bmatrix} }^{-1} = \begin{bmatrix} A^{-1}&amp;O \\ O&amp;B^{-1} \end{bmatrix}$， ${\begin{bmatrix} O&amp;A \\ B&amp;O \end{bmatrix} }^{-1} = \begin{bmatrix} O&amp;B^{-1} \\ A^{-1}&amp;O \end{bmatrix}$</li>
 </ul>
 <h3 id="2-1-5-伴随矩阵"><a href="#2-1-5-伴随矩阵" class="headerlink" title="2.1.5 伴随矩阵"></a>2.1.5 伴随矩阵</h3><ul>
-<li>$A^<em>=|A|A^{-1}$，$AA^</em>=A^*A=|A|E$</li>
+<li>$A^*=|A| A^{-1}$，$A A^* = A^* A = |A| E$</li>
 <li>$|A^*| = |A|^{n-1}$</li>
-<li>$(A^T)^<em>=(A^</em>)^T$</li>
-<li>$(A^{-1})^<em>=(A^</em>)^{-1}$</li>
-<li>$(AB)^<em>=B^</em>A^*$</li>
-<li>$(A^<em>)^</em>=|A|^{n-2}A$</li>
+<li>$(A^T)^*=(A^*)^T$</li>
+<li>$(A^{-1})^*=(A^*)^{-1}$</li>
+<li>$(AB)^*=B^*A^*$</li>
+<li>$(A^*)^*=|A|^{n-2}A$</li>
 </ul>
 <h2 id="2-2-矩阵的秩-rank"><a href="#2-2-矩阵的秩-rank" class="headerlink" title="2.2 矩阵的秩(rank)"></a>2.2 矩阵的秩(rank)</h2><ul>
 <li>初等变换不改变矩阵的秩</li>
 <li>有关秩的等式和不等式$A_{m\times n}$<ul>
-<li>$r(A)\leq min{m,n}$</li>
+<li>$r(A)\leq min\{m,n\}$</li>
 <li>$r(A)=r(A^T)$</li>
 <li>$r(kA)=r(A) (k\neq 0)$</li>
 <li>$r(A+B)\leq r(A)+r(B)$</li>
-<li>$r(AB)\leq min{r(A),r(B)}$</li>
+<li>$r(AB)\leq min\{r(A),r(B)\}$</li>
 <li>$r(AB)\geq r(A)+r(B)-n$</li>
 <li>$AB=O$时，$r(A)+r(B)\leq n$</li>
 <li>$r(\begin{bmatrix} A&amp;O \\ C&amp;B \end{bmatrix})=r(A)+r(B)$</li>
@@ -425,7 +425,9 @@
 <li>$\displaystyle \prod_{i=1}^n \lambda_i = |A|$</li>
 </ul>
 <h2 id="2-4-相似矩阵与相似对角化"><a href="#2-4-相似矩阵与相似对角化" class="headerlink" title="2.4 相似矩阵与相似对角化"></a>2.4 相似矩阵与相似对角化</h2><h3 id="2-4-1-矩阵的相似"><a href="#2-4-1-矩阵的相似" class="headerlink" title="2.4.1 矩阵的相似"></a>2.4.1 矩阵的相似</h3><h4 id="2-4-1-1-定义"><a href="#2-4-1-1-定义" class="headerlink" title="2.4.1.1 定义"></a>2.4.1.1 定义</h4><ul>
-<li>设$A,B$是两个$n$阶方阵，若存在$n$阶可逆阵$P$，使得$P^{-1}AP=B$，则称$A相似于B$，记成$A\sim B$<h4 id="2-4-1-2-性质"><a href="#2-4-1-2-性质" class="headerlink" title="2.4.1.2 性质"></a>2.4.1.2 性质</h4></li>
+<li>设$A,B$是两个$n$阶方阵，若存在$n$阶可逆阵$P$，使得$P^{-1}AP=B$，则称$A$相似于$B$，记成$A\sim B$</li>
+</ul>
+<h4 id="2-4-1-2-性质"><a href="#2-4-1-2-性质" class="headerlink" title="2.4.1.2 性质"></a>2.4.1.2 性质</h4><ul>
 <li>若$A\sim B$，则有：<ul>
 <li>$r(A)=r(B)$</li>
 <li>$|A|=|B|$</li>
@@ -434,12 +436,12 @@
 <li>$tr(A)=tr(B)$</li>
 </ul>
 </li>
-<li>若$A\sim B$，则$A^m\sim B^m，f(A)\sim f(B)（其中f(x)是多项式）$</li>
-<li>若$A\sim B$，$且A可逆，则A^{-1}\sim B^{-1}，f(A^{-1})\sim f(B^{-1})（其中f(x)是多项式）$</li>
+<li>若$A\sim B$，则$A^m\sim B^m$，$f(A)\sim f(B)$（其中$f(x)$是多项式）</li>
+<li>若$A\sim B$，且$A$可逆，则$A^{-1}\sim B^{-1}$，$f(A^{-1})\sim f(B^{-1})$（其中$f(x)$是多项式）</li>
 </ul>
 <h3 id="2-4-2-矩阵可对角化的条件"><a href="#2-4-2-矩阵可对角化的条件" class="headerlink" title="2.4.2 矩阵可对角化的条件"></a>2.4.2 矩阵可对角化的条件</h3><ul>
-<li>$若存在矩阵P，使得P^{-1}AP=\varLambda，其中\varLambda是对角阵，则称A可相似对角化，记A\sim \varLambda，称\varLambda是a的相似标准型$<ul>
-<li>$A有n$个线性无关特征向量</li>
+<li>若存在矩阵$P$，使得$P^{-1}AP=\varLambda$，其中$\varLambda$是对角阵，则称$A$可相似对角化，记$A\sim \varLambda$，称$\varLambda$是$A$的相似标准型<ul>
+<li>$A$有$n$个线性无关特征向量</li>
 <li>矩阵$A$的属于不同特征值的特征向量线性无关</li>
 </ul>
 </li>
@@ -447,15 +449,21 @@
 <h3 id="2-4-3-实对称矩阵必可相似于对角阵"><a href="#2-4-3-实对称矩阵必可相似于对角阵" class="headerlink" title="2.4.3 实对称矩阵必可相似于对角阵"></a>2.4.3 实对称矩阵必可相似于对角阵</h3><ul>
 <li>$A$是是对称阵，则$A$的特征值是实数，特征向量是实向量</li>
 <li>实对称阵$A$的属于不同特征值的特征向量相互正交</li>
-<li>实对称矩阵必可相似于对角阵，即必有$n$个线性无关特征向量$\xi_1,\xi_2,\cdots, \xi_n$，即必有可逆阵$P=[\xi_1,\xi_2,\cdots, \xi_n]使得P^{-1}AP=\varLambda，其中\varLambda=diag(\lambda_1, \lambda_2, \cdots, \lambda_n)，且存在正交阵，使得Q^{-1}AQ=Q^TAQ=\varLambda，故A正交相似于\varLambda。$</li>
+<li>实对称矩阵必可相似于对角阵，即必有$n$个线性无关特征向量$\xi_1,\xi_2,\cdots, \xi_n$，即必有可逆阵$P=[\xi_1,\xi_2,\cdots, \xi_n]$使得$P^{-1}AP=\varLambda$，其中$\varLambda=diag(\lambda_1, \lambda_2, \cdots, \lambda_n)$，且存在正交阵，使得$Q^{-1}AQ=Q^TAQ=\varLambda$，故$A$正交相似于$\varLambda$。</li>
 </ul>
 <h2 id="2-5-二次型"><a href="#2-5-二次型" class="headerlink" title="2.5 二次型"></a>2.5 二次型</h2><h3 id="2-5-1-二次型及其矩阵表示"><a href="#2-5-1-二次型及其矩阵表示" class="headerlink" title="2.5.1 二次型及其矩阵表示"></a>2.5.1 二次型及其矩阵表示</h3><ul>
-<li>$n元二次型：f(x_1,x_2,\cdots,x_n)=\displaystyle\sum_{j=1}^n \sum_{i=1}^n a_{ij}x_ix_j(其中a_{ij}=a_{ji})$，当所有系数均为实数时称为实二次型</li>
-<li>$f(x_1,x_2,\cdots,x_n)=x^TAx，A^T=A，f与A一一对应，A称作二次型矩阵，A的秩也是f的秩$<h3 id="2-5-2-合同变换，二次型的合同标准型、规范型"><a href="#2-5-2-合同变换，二次型的合同标准型、规范型" class="headerlink" title="2.5.2 合同变换，二次型的合同标准型、规范型"></a>2.5.2 合同变换，二次型的合同标准型、规范型</h3><h4 id="2-5-2-1-可逆线性变换"><a href="#2-5-2-1-可逆线性变换" class="headerlink" title="2.5.2.1 可逆线性变换"></a>2.5.2.1 可逆线性变换</h4></li>
-<li>若令$x=Cy$，其中，$|C|\neq 0$，则称$x=Cy$为可逆线性变换，若C是正交阵，则变换称为正交变换<h4 id="2-5-2-2-合同二次型"><a href="#2-5-2-2-合同二次型" class="headerlink" title="2.5.2.2 合同二次型"></a>2.5.2.2 合同二次型</h4></li>
-<li>$两个n阶矩阵A，B，若存在可逆阵C，使得C^TAC=B，则称A合同于B，记成A\simeq B$，故经可逆线性变换后，二次型的对应矩阵是合同矩阵，此时的二次型称为合同二次型<h4 id="2-5-2-3-二次型的标准型、规范型"><a href="#2-5-2-3-二次型的标准型、规范型" class="headerlink" title="2.5.2.3 二次型的标准型、规范型"></a>2.5.2.3 二次型的标准型、规范型</h4></li>
+<li>$n$元二次型：$f(x_1,x_2,\cdots,x_n)=\displaystyle\sum_{j=1}^n \sum_{i=1}^n a_{ij}x_ix_j$(其中$a_{ij}=a_{ji}$)，当所有系数均为实数时称为实二次型</li>
+<li>$f(x_1,x_2,\cdots,x_n)=x^TAx$，$A^T=A$，$f$与$A$一一对应，$A$称作二次型矩阵，$A$的秩也是$f$的秩</li>
+</ul>
+<h3 id="2-5-2-合同变换，二次型的合同标准型、规范型"><a href="#2-5-2-合同变换，二次型的合同标准型、规范型" class="headerlink" title="2.5.2 合同变换，二次型的合同标准型、规范型"></a>2.5.2 合同变换，二次型的合同标准型、规范型</h3><h4 id="2-5-2-1-可逆线性变换"><a href="#2-5-2-1-可逆线性变换" class="headerlink" title="2.5.2.1 可逆线性变换"></a>2.5.2.1 可逆线性变换</h4><ul>
+<li>若令$x=Cy$，其中，$|C|\neq 0$，则称$x=Cy$为可逆线性变换，若$C$是正交阵，则变换称为正交变换</li>
+</ul>
+<h4 id="2-5-2-2-合同二次型"><a href="#2-5-2-2-合同二次型" class="headerlink" title="2.5.2.2 合同二次型"></a>2.5.2.2 合同二次型</h4><ul>
+<li>两个$n$阶矩阵$A，B$，若存在可逆阵$C$，使得$C^TAC=B$，则称$A$合同于$B$，记成$A\simeq B$，故经可逆线性变换后，二次型的对应矩阵是合同矩阵，此时的二次型称为合同二次型</li>
+</ul>
+<h4 id="2-5-2-3-二次型的标准型、规范型"><a href="#2-5-2-3-二次型的标准型、规范型" class="headerlink" title="2.5.2.3 二次型的标准型、规范型"></a>2.5.2.3 二次型的标准型、规范型</h4><ul>
 <li>标准型：只含平方项，没有交叉项</li>
-<li>规范型：标准型中系数仅为$-1,，0，1$</li>
+<li>规范型：标准型中系数仅为$-1,0,1$</li>
 <li>任何实对称阵$A$必存在可逆阵$C$，使得$C^TAC=\varLambda$，其中$\varLambda$为标准型或规范型</li>
 <li>任何实对称阵$A$必存在正交阵$Q$，使得$Q^{-1}AQ=Q^TAQ=\varLambda$，其中$\varLambda=\begin{bmatrix} \lambda_1 \\ &amp;\lambda_2 \\ &amp;&amp;\ddots \\ &amp;&amp;&amp;\lambda_n \end{bmatrix}$</li>
 </ul>
@@ -466,9 +474,9 @@
 <li>两个二次型（或实对称阵）合同的充要条件是拥有相同的$p，q，r$三选二</li>
 </ul>
 <h3 id="2-5-4-正定二次型"><a href="#2-5-4-正定二次型" class="headerlink" title="2.5.4 正定二次型"></a>2.5.4 正定二次型</h3><ul>
-<li>对于任意的$x=[x_1,x_2,\cdots,x_n]^T\neq 0$，均有$x^TAx&gt;0(&lt;0，\geq 0，\leq 0)$，则称f为正定（负定，半正定，半负定）</li>
+<li>对于任意的$x=[x_1,x_2,\cdots,x_n]^T\neq 0$，均有$x^TAx&gt;0(&lt;0，\geq 0，\leq 0)$，则称$f$为正定（负定，半正定，半负定）</li>
 <li>正定的充要条件<ul>
-<li>对于任意的$x=\neq 0$，均有$x^TAx&gt;0</li>
+<li>对于任意的$x\neq 0$，均有$x^TAx&gt;0$</li>
 <li>$p=n$</li>
 <li>存在可逆阵$D$，使$A=D^TD$</li>
 <li>$A\simeq E$</li>
@@ -499,9 +507,11 @@
 </ul>
 </li>
 </ul>
-<h1 id="3-向量组"><a href="#3-向量组" class="headerlink" title="3 向量组"></a>3 向量组</h1><h2 id="向量的内积和正交"><a href="#向量的内积和正交" class="headerlink" title="向量的内积和正交"></a>向量的内积和正交</h2><ul>
+<h1 id="3-向量组"><a href="#3-向量组" class="headerlink" title="3 向量组"></a>3 向量组</h1><h2 id="3-1-向量的内积和正交"><a href="#3-1-向量的内积和正交" class="headerlink" title="3.1 向量的内积和正交"></a>3.1 向量的内积和正交</h2><ul>
 <li>$\alpha^T\beta=0$时，称$\alpha，\beta$为正交向量 </li>
-<li>$||\alpha||=\sqrt{\displaystyle \sum_{i=1}^n a_i^2}$称为向量的模<h2 id="施密特标准正交化"><a href="#施密特标准正交化" class="headerlink" title="施密特标准正交化"></a>施密特标准正交化</h2></li>
+<li>$||\alpha||=\sqrt{\displaystyle \sum_{i=1}^n a_i^2}$称为向量的模</li>
+</ul>
+<h2 id="3-2-施密特标准正交化"><a href="#3-2-施密特标准正交化" class="headerlink" title="3.2 施密特标准正交化"></a>3.2 施密特标准正交化</h2><ul>
 <li>线性无关向量组$\alpha_1,\alpha_2,\cdots,\alpha_n$<ul>
 <li>$\beta_1 = \alpha_1$</li>
 <li>$\beta_2 = \alpha_2-\frac{(\alpha_2,\beta_1)}{(\beta_1,\beta_1)} \beta_1$</li>
@@ -520,7 +530,33 @@
 <li>$r(A)=r&lt;n$时，方程组有非零解，且有$n-r$个线性无关解</li>
 </ul>
 <h3 id="4-1-2-解的性质"><a href="#4-1-2-解的性质" class="headerlink" title="4.1.2 解的性质"></a>4.1.2 解的性质</h3><ul>
-<li><h2 id="4-2-非齐次线性方程组"><a href="#4-2-非齐次线性方程组" class="headerlink" title="4.2 非齐次线性方程组"></a>4.2 非齐次线性方程组</h2></li>
+<li>若$A\xi_1=0, A\xi_2=0$，则$A(k_1\xi_1+k_2\xi_2)=0$，其中$k_1$和$k_2$是任意常数</li>
+</ul>
+<h3 id="4-1-3-求解方法"><a href="#4-1-3-求解方法" class="headerlink" title="4.1.3 求解方法"></a>4.1.3 求解方法</h3><ul>
+<li>高斯消元法</li>
+</ul>
+<h3 id="4-1-4-基础解系和解的结构"><a href="#4-1-4-基础解系和解的结构" class="headerlink" title="4.1.4 基础解系和解的结构"></a>4.1.4 基础解系和解的结构</h3><ul>
+<li>基础解系：$\xi_1,\xi_2,\cdots,\xi_{n-r}$ 线性无关，且 $Ax=0$ 的任意解均可由 $\xi_i$ 线性表出</li>
+<li>通解：基础解系的加权和，$\displaystyle \sum_{i=1}^{n-r} k_i \xi_i$，其中$k_i$是任意常数</li>
+</ul>
+<h2 id="4-2-非齐次线性方程组"><a href="#4-2-非齐次线性方程组" class="headerlink" title="4.2 非齐次线性方程组"></a>4.2 非齐次线性方程组</h2><ul>
+<li>$A_{m\times n} x = b$</li>
+<li>$[A|b]$或$[A,b]$称为增广矩阵</li>
+</ul>
+<h3 id="4-2-1-有解的条件"><a href="#4-2-1-有解的条件" class="headerlink" title="4.2.1 有解的条件"></a>4.2.1 有解的条件</h3><ul>
+<li>若$r(A)\neq r(A|b)$（$b$不能由 $\alpha_1,\alpha_2,\cdots,\alpha_n$ 线性表出），则方程组无解</li>
+<li>若$r(A)=r(A|b)=n$（$\alpha_1,\alpha_2,\cdots,\alpha_n$ 线性无关，$\alpha_1,\alpha_2,\cdots,\alpha_n,b$ 线性相关），则方程组有唯一解</li>
+<li>若$r(A)=r(A|b)=r&lt;n$，则方程组有无穷多解</li>
+</ul>
+<h3 id="4-2-2-解的性质"><a href="#4-2-2-解的性质" class="headerlink" title="4.2.2 解的性质"></a>4.2.2 解的性质</h3><ul>
+<li>设 $\eta_1, \eta_2, \eta_3$ 是非齐次线性方程组 $Ax=b$ 的解，$\xi$ 是对应齐次线性方程组 $Ax=0$ 的解，则<ul>
+<li>$\eta_1-\eta_2$ 是 $Ax=0$ 的解</li>
+<li>$k\xi+\eta$ 是 $Ax=b$ 的解</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-3-求解方法和通解结构"><a href="#4-2-3-求解方法和通解结构" class="headerlink" title="4.2.3 求解方法和通解结构"></a>4.2.3 求解方法和通解结构</h3><ul>
+<li>将增广矩阵做高斯消元，求出对应齐次线性方程组的通解，加上一个非齐次线性方程组的特解，即是非齐次线性方程组的通解</li>
 </ul>
 
       
@@ -657,7 +693,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -712,7 +748,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-行列式的基本概念与计算"><span class="nav-text">1 行列式的基本概念与计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-行列式的定义"><span class="nav-text">1.1 行列式的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-排列和逆序"><span class="nav-text">1.1.1 排列和逆序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-n阶行列式的定义"><span class="nav-text">1.1.2 n阶行列式的定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-行列式的性质"><span class="nav-text">1.2 行列式的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-行列式展开定理"><span class="nav-text">1.3 行列式展开定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-范德蒙德行列式"><span class="nav-text">1.4 范德蒙德行列式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-矩阵的基本概念与运算"><span class="nav-text">2 矩阵的基本概念与运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-矩阵的定义及其基本运算"><span class="nav-text">2.1 矩阵的定义及其基本运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-矩阵的定义"><span class="nav-text">2.1.1 矩阵的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-基本运算"><span class="nav-text">2.1.2 基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-特殊矩阵"><span class="nav-text">2.1.3 特殊矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-逆矩阵"><span class="nav-text">2.1.4 逆矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-5-伴随矩阵"><span class="nav-text">2.1.5 伴随矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-矩阵的秩-rank"><span class="nav-text">2.2 矩阵的秩(rank)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-特征值与特征向量"><span class="nav-text">2.3 特征值与特征向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-相似矩阵与相似对角化"><span class="nav-text">2.4 相似矩阵与相似对角化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-1-矩阵的相似"><span class="nav-text">2.4.1 矩阵的相似</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1-1-定义"><span class="nav-text">2.4.1.1 定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1-2-性质"><span class="nav-text">2.4.1.2 性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-2-矩阵可对角化的条件"><span class="nav-text">2.4.2 矩阵可对角化的条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-3-实对称矩阵必可相似于对角阵"><span class="nav-text">2.4.3 实对称矩阵必可相似于对角阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-二次型"><span class="nav-text">2.5 二次型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-1-二次型及其矩阵表示"><span class="nav-text">2.5.1 二次型及其矩阵表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-2-合同变换，二次型的合同标准型、规范型"><span class="nav-text">2.5.2 合同变换，二次型的合同标准型、规范型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-1-可逆线性变换"><span class="nav-text">2.5.2.1 可逆线性变换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-2-合同二次型"><span class="nav-text">2.5.2.2 合同二次型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-3-二次型的标准型、规范型"><span class="nav-text">2.5.2.3 二次型的标准型、规范型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-3-惯性定理"><span class="nav-text">2.5.3 惯性定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-4-正定二次型"><span class="nav-text">2.5.4 正定二次型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-5-等价、相似、合同"><span class="nav-text">2.5.5 等价、相似、合同</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-向量组"><span class="nav-text">3 向量组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#向量的内积和正交"><span class="nav-text">向量的内积和正交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#施密特标准正交化"><span class="nav-text">施密特标准正交化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-线性方程组"><span class="nav-text">4 线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-齐次线性方程组"><span class="nav-text">4.1 齐次线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-1-有解的条件"><span class="nav-text">4.1.1 有解的条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-2-解的性质"><span class="nav-text">4.1.2 解的性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-非齐次线性方程组"><span class="nav-text">4.2 非齐次线性方程组</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-行列式的基本概念与计算"><span class="nav-text">1 行列式的基本概念与计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-行列式的定义"><span class="nav-text">1.1 行列式的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-排列和逆序"><span class="nav-text">1.1.1 排列和逆序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-n阶行列式的定义"><span class="nav-text">1.1.2 n阶行列式的定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-行列式的性质"><span class="nav-text">1.2 行列式的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-行列式展开定理"><span class="nav-text">1.3 行列式展开定理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-范德蒙德行列式"><span class="nav-text">1.4 范德蒙德行列式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-矩阵的基本概念与运算"><span class="nav-text">2 矩阵的基本概念与运算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-矩阵的定义及其基本运算"><span class="nav-text">2.1 矩阵的定义及其基本运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-矩阵的定义"><span class="nav-text">2.1.1 矩阵的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-基本运算"><span class="nav-text">2.1.2 基本运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-特殊矩阵"><span class="nav-text">2.1.3 特殊矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-逆矩阵"><span class="nav-text">2.1.4 逆矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-5-伴随矩阵"><span class="nav-text">2.1.5 伴随矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-矩阵的秩-rank"><span class="nav-text">2.2 矩阵的秩(rank)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-特征值与特征向量"><span class="nav-text">2.3 特征值与特征向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-相似矩阵与相似对角化"><span class="nav-text">2.4 相似矩阵与相似对角化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-1-矩阵的相似"><span class="nav-text">2.4.1 矩阵的相似</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1-1-定义"><span class="nav-text">2.4.1.1 定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1-2-性质"><span class="nav-text">2.4.1.2 性质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-2-矩阵可对角化的条件"><span class="nav-text">2.4.2 矩阵可对角化的条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-3-实对称矩阵必可相似于对角阵"><span class="nav-text">2.4.3 实对称矩阵必可相似于对角阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-二次型"><span class="nav-text">2.5 二次型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-1-二次型及其矩阵表示"><span class="nav-text">2.5.1 二次型及其矩阵表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-2-合同变换，二次型的合同标准型、规范型"><span class="nav-text">2.5.2 合同变换，二次型的合同标准型、规范型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-1-可逆线性变换"><span class="nav-text">2.5.2.1 可逆线性变换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-2-合同二次型"><span class="nav-text">2.5.2.2 合同二次型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-3-二次型的标准型、规范型"><span class="nav-text">2.5.2.3 二次型的标准型、规范型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-3-惯性定理"><span class="nav-text">2.5.3 惯性定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-4-正定二次型"><span class="nav-text">2.5.4 正定二次型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-5-等价、相似、合同"><span class="nav-text">2.5.5 等价、相似、合同</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-向量组"><span class="nav-text">3 向量组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-向量的内积和正交"><span class="nav-text">3.1 向量的内积和正交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-施密特标准正交化"><span class="nav-text">3.2 施密特标准正交化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-线性方程组"><span class="nav-text">4 线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-齐次线性方程组"><span class="nav-text">4.1 齐次线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-1-有解的条件"><span class="nav-text">4.1.1 有解的条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-2-解的性质"><span class="nav-text">4.1.2 解的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-3-求解方法"><span class="nav-text">4.1.3 求解方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-4-基础解系和解的结构"><span class="nav-text">4.1.4 基础解系和解的结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-非齐次线性方程组"><span class="nav-text">4.2 非齐次线性方程组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-1-有解的条件"><span class="nav-text">4.2.1 有解的条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-2-解的性质"><span class="nav-text">4.2.2 解的性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-3-求解方法和通解结构"><span class="nav-text">4.2.3 求解方法和通解结构</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
